@@ -2,7 +2,7 @@
   "name": "react-recipe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://austindoublec.github.io/react-recipe/",
   "dependencies": {
     "@splidejs/react-splide": "^0.7.8",
     "@splidejs/splide": "^4.0.7",
