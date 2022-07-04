@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+#logo1,
+#logo2{
+    font-size: 1rem;
+    margin: 0;
+    color: rgb(72, 86, 54);
+}
+.span{
+    font-size: 1.5rem;
+    color: rgb(43, 52, 32);
+}
+.logo-container{
+    margin: 1rem 0rem 0rem 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+    background-color: rgb(183, 213, 147);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding-bottom: 1rem;
+    z-index:2;
+}
+.fa-hippo{
+    font-size: 2rem;
+    color: rgb(43, 52, 32);
+    margin-right: 0.2rem;
+}
+#search-container{
+    margin: 0 auto;
+    width: min-content;
+    display: flex;
+    height: 40px;
+}
+.input-search{
+    width: 300px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btnSearch{
+    border: none;
+    outline: none;
+    width: 3rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*==filter==*/
+.filter-container{
+    display: flex;
+    margin: 0px auto;
+    width: 40%
+}
+.filter-button{
+    margin: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+/*==result==*/
+#result-container{
+    width: 80%;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#randoms-container{
+    height: 120px;
+    width: 50%;
+    margin: 2rem auto 3rem auto;
+}
+
+.random-button{
+    width: 50%;
+    margin: 1rem auto 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.random-button h3{
+    margin:0px
+}
+.random-image{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.random-container{
+    width: 10vw;
+    margin: 0px 2rem;
+}
+.random-container p{
+    font-size: 0.5rem;
+}
+
+.recipe-image{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px black;
+    object-fit: fill;
+    margin: 0px;
+}
+.recipe-container{
+    width: 15vw;
+    padding: 0;
+    height: 200px;
+}
+.recipe-title{
+    position: relative;
+    top:-120px;
+    z-index: 2;
+    color: #eee;
+    text-shadow: 0px 0px 1px black;
+    text-align: center;
+}
+
+.fa-arrows-rotate{
+    color: green;
+}
+.fa-arrows-rotate:hover,
+.fa-arrows-rotate:active{
+    cursor: pointer;
+    color: lightcoral;
+}
+
+@media screen and (max-width:1000px){
+    .recipe-container{
+        width: 20vw;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .recipe-container{
+        width: 30vw;
+    }
+    .random-container{
+        width: 18vw;
+    }
+}
+#modal-outer,
+#modalRandom-outer{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+#modal-container{
+    width: 60%;
+    height: 60vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    overflow-y: auto;
+}
+#modal-container h2{
+    text-align: center;
+}
+.modal-recipe{
+    display: flex;
+}
+
+.modal-image{
+    width: 40%;
+    height: 300px;
+    object-fit: cover;
 }
