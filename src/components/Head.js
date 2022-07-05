@@ -1,4 +1,5 @@
 import {useEffect} from "react"
+import logo from '../logo.png'
 
 function Head({setRecipes, setQuery, setSearch, query, search}) {
 
@@ -29,13 +30,12 @@ const getRecipes = async () =>{
   return (
     <div className="header">
       <div className="logo-container">
-        <h3 id="logo1"><span className="span">H</span>ungry</h3>
-        <h3 id="logo2"><i className="fa-solid fa-hippo"></i><span className="span">H</span>ippo</h3>
+        <img src={logo} alt="Logo" />
       </div>
       <form onSubmit={getSearch} className="search-form">
           <div id="search-container">
           <button className="btnSearch" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-          <input className="input-search" type="text" value={search} onChange={updateSearch} placeholder="Enter text here"></input>
+          <input className="input-search" type="text" value={search} onChange={updateSearch} placeholder="Search your recipe..."></input>
           </div>
       </form>
       

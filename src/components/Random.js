@@ -14,7 +14,7 @@ function Random({setRandomResult}) {
    
   return (
     <div className="random-button">
-      <h3>random recipes</h3>
+      <h2>random recipes</h2>
       <i className="fa-solid fa-arrows-rotate" onClick={()=>getRandom()}></i>
     </div>
   )

@@ -1,36 +1,25 @@
-#logo1,
-#logo2{
-    font-size: 1rem;
-    margin: 0;
-    color: rgb(72, 86, 54);
-}
-.span{
-    font-size: 1.5rem;
-    color: rgb(43, 52, 32);
-}
 .logo-container{
     margin: 1rem 0rem 0rem 2rem;
 }
 
 .header{
-    background-color: rgb(183, 213, 147);
+    background-color: rgb(178, 228, 116);
     width: 100%;
     position: sticky;
     top: 0;
     padding-bottom: 1rem;
     z-index:2;
-}
-.fa-hippo{
-    font-size: 2rem;
-    color: rgb(43, 52, 32);
-    margin-right: 0.2rem;
+    display: flex;
+    align-items: flex-end;
 }
 #search-container{
-    margin: 0 auto;
-    width: min-content;
+    margin: 0;
+    margin-left:calc(100vw/2 - 295px);
+    width: 350px;
     display: flex;
     height: 40px;
 }
+
 .input-search{
     width: 300px;
     border: none;
@@ -64,45 +53,63 @@
 }
 
 #randoms-container{
-    height: 120px;
-    width: 50%;
+    width: 60%;
     margin: 2rem auto 3rem auto;
+    background-color: rgb(221, 246, 191);
+    padding-top: 1rem;
+    border-radius: 0.5rem;
 }
 
 .random-button{
-    width: 50%;
+    width: 55%;
     margin: 1rem auto 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.random-button h3{
+.random-button h2{
     margin:0px
 }
 .random-image{
     width: 100%;
     border-radius: 10px;
+    border: 5px white solid;
+}
+.random-image:hover,
+.random-image:active{
+    filter: contrast(120%);
+    filter: brightness(130%);
+    border: 5px rgb(131, 131, 131) solid;
+    cursor: pointer;
 }
 
 .random-container{
-    width: 10vw;
+    width: 12vw;
     margin: 0px 2rem;
 }
 .random-container p{
     font-size: 0.5rem;
+    text-align: center;
 }
 
 .recipe-image{
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0px 0px 3px black;
+    border: 5px white solid;;
     object-fit: fill;
     margin: 0px;
+}
+
+.recipe-image:hover,
+.recipe-image:active{
+    filter: contrast(120%);
+    filter: brightness(130%);
+    border: 5px rgb(131, 131, 131) solid;
+    cursor: pointer;
 }
 .recipe-container{
     width: 15vw;
     padding: 0;
-    height: 200px;
 }
 .recipe-title{
     position: relative;
@@ -122,6 +129,12 @@
     color: lightcoral;
 }
 
+@media screen and (max-width:1200px){
+    .random-container{
+        width: 15vw;
+    }
+    
+}
 @media screen and (max-width:1000px){
     .recipe-container{
         width: 20vw;
@@ -132,9 +145,29 @@
     .recipe-container{
         width: 30vw;
     }
-    .random-container{
-        width: 18vw;
+    #randoms-container{
+        width: 70%;
     }
+    .random-container{
+        width: 20vw;
+    }
+
+    #search-container{
+        margin-left: 2rem;
+    }
+}
+@media screen and (max-width:600px){
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header img{
+        margin-bottom: 1rem;
+    }
+    .random-container{
+        width: 25vw;
+    }
+
 }
 #modal-outer,
 #modalRandom-outer{
@@ -149,21 +182,81 @@
 }
 #modal-container{
     width: 60%;
-    height: 60vh;
+    height: 500px;
     background-color: white;
     margin: auto;
     margin-top: 100px;
     overflow-y: auto;
+    background-color: rgb(221, 246, 191);
+    border-radius: 0.5rem;
 }
 #modal-container h2{
     text-align: center;
+    text-decoration: underline;
+    color: #444
 }
 .modal-recipe{
     display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto 1rem;
+    border: 1px black auto;
+    background-color: white;
+    border-radius: 0.5rem;
 }
 
 .modal-image{
-    width: 40%;
-    height: 300px;
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    margin: 1rem;
     object-fit: cover;
+}
+.recipe-detail{
+    width: 50%;
+}
+.fa-xmark{
+    margin: 0.5rem 0 0 0.5rem;
+}
+.fa-xmark:hover,
+.fa-xmark:active{
+    cursor: pointer;
+    color: red;
+}
+
+@media screen and (max-width:1100px) {
+    .modal-image{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:800px) {
+    .modal-recipe{
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-image{
+        width: 250px;
+        height: 250px;
+    }
+    .recipe-detail{
+        width: 80%;
+    }
+    #modal-container{
+        width: 80%;
+}
+}
+
+@media screen and (max-width:800px){
+    #modal-container{
+        width: 90%;
+}
+}
+
+@media screen and (max-height:600px) {
+    #modal-container{
+        height: 400px;
+        margin-top: 20px;
+    }
 }
