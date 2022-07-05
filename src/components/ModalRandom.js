@@ -1,10 +1,9 @@
 
 function Modal({filteredRandom, setSelectedRandom}) {
-    console.log(filteredRandom.extendedIngredients)
     return (
       <div id="modalRandom-outer">
           <div id="modal-container">
-              <i class="fa-solid fa-xmark" onClick={()=>setSelectedRandom("")}></i>
+              <i className="fa-solid fa-xmark" onClick={()=>setSelectedRandom("")}></i>
               
               <h2>{filteredRandom.title}</h2>
               <div className="modal-recipe">
@@ -19,6 +18,7 @@ function Modal({filteredRandom, setSelectedRandom}) {
                    ))
                    }
                 </ol>
+                <a href={filteredRandom.sourceUrl} className="recipe-url" target="_blank">see detail recipe</a>
                 </div>
             </div>
   

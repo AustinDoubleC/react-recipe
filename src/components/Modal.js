@@ -2,7 +2,7 @@ function Modal({filteredRecipe, setSelectedRecipe}) {
   return (
     <div id="modal-outer">
         <div id="modal-container">
-          <i class="fa-solid fa-xmark" onClick={()=>setSelectedRecipe("")}></i>
+          <i className="fa-solid fa-xmark" onClick={()=>setSelectedRecipe("")}></i>
             <h2>{filteredRecipe.recipe.label}</h2>
             <div className="modal-recipe">
                 <img src={filteredRecipe.recipe.image} alt={filteredRecipe.recipe.label} className="modal-image"/>  
@@ -15,6 +15,7 @@ function Modal({filteredRecipe, setSelectedRecipe}) {
                         <li>{ingredient.text}</li>
                     ))}
                     </ol>
+                    <a href={filteredRecipe.recipe.url} className="recipe-url" target="_blank">see detail recipe</a>
                     </div>
             </div>
         </div>
