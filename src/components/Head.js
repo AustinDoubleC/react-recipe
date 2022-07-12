@@ -10,7 +10,6 @@ function Head({setRecipes, setQuery, setSearch, query, search}) {
 const getRecipes = async () =>{
   const response = await fetch (`https://api.edamam.com/search?q=${query}&app_id=552063c7&app_key=de9efc6166b8b86638b0df942bb06940`)
   const data = await response.json();
-  console.log(data.hits)
   setRecipes (data.hits);
 }
 
